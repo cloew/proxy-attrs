@@ -4,7 +4,7 @@ def proxy_for(parent, attrs):
         hide interaction from a class to an internal component """
     def addProxyData(cls):
         def add_property(cls, attr):
-            setattr(cls, attr, build_property(attr, parent))
+            setattr(cls, attr, build_property(parent, attr))
             
         for attr in attrs:
             add_property(cls, attr)
@@ -13,9 +13,9 @@ def proxy_for(parent, attrs):
     
 def ProxyAttr(parent, attr):
     """ Return the property to get, set and delete the attr aon the parent field """
-    return build_property(attr, parent)
+    return build_property(parent, attr)
     
-def build_property(attr, parent):
+def build_property(parent, attr):
     """ Return the property to access the field """
     def getter(self):
         return getattr(getattr(self, parent), attr)
