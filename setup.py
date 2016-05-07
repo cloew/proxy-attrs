@@ -1,9 +1,9 @@
 from distutils.core import setup
 
 setup(name='proxy_attrs',
-      version='0.0.1',
+      version='0.1.0',
       description="",
-      author='',
-      author_email='',
-      packages=['proxy_attrs'],
+      author='Chris Loew',
+      author_email='cloew123@gmail.com',
+      py_modules=['proxy_attrs'],
      )
