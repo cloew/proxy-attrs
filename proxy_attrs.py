@@ -22,5 +22,5 @@ def build_property(parent, attr):
     def setter(self, v):
         setattr(getattr(self, parent), attr, v)
     def deleter(self):
-        del getattr(getattr(self, parent), attr)
+        delattr(getattr(self, parent), attr)
     return property(getter, setter, deleter)

@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(name='proxy_attrs',
-      version='0.1.0',
+      version='0.1.1',
       description="",
       author='Chris Loew',
       author_email='cloew123@gmail.com',
